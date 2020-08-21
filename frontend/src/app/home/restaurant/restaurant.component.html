@@ -1,0 +1,37 @@
+<div class="row mt-4">
+  <div class="col-sm-9">
+    <div class="meals_list row">
+      <div class="meals_container col-sm-6" *ngFor="let meal of meals" (click)="addToCart(meal)">
+        <div class="meal_list_item_wrapper">
+          <meal-list-item [meal]="meal"></meal-list-item>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="shopping_cart">
+      <div class="order-price">
+        <div class="price">Total Amount</div>
+        <div class="price">{{price}} $</div>
+        <div class="order_button_container mt-4">
+          <button [disabled]="!price" class="btn btn-primary" (click)="createOrder()"> Create Order</button>
+        </div>
+      </div>
+    </div>
+    <div class="meals_list cart row ">
+      <div class="meals_container col-sm-12" *ngFor="let meal of order_meals">
+        <div class="meal_list_item_wrapper">
+          <i class="fa fa-remove remove_icon" (click)="removeFromCart(meal.meal)"></i>
+          <meal-list-item [meal]="meal.meal" class="cart"></meal-list-item>
+          <div class="col-sm-6">
+            <label class="col-sm-2 col-form-label list_item_text -align-justify">Qty</label>
+            <input type="number" min="1" class="form-control" [(ngModel)]="meal.count"
+                   (change)="changeCount(meal)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

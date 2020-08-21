@@ -1,0 +1,44 @@
+:host {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  position: relative;
+}
+
+.restaurant_container {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  .name {
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 5px;
+  }
+  .description {
+    flex: auto;
+    max-height: 100%;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.restaurant_icon {
+  font-size: 100px;
+  opacity: 0.1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+

@@ -1,0 +1,60 @@
+﻿<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header">Food Delivery Application</h4>
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="first_name">First Name</label>
+          <input type="text" formControlName="first_name" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.first_name.errors }"/>
+          <div *ngIf="submitted && f.first_name.errors" class="invalid-feedback">
+            <div *ngIf="f.first_name.errors.required">First name is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last name</label>
+          <input type="text" formControlName="last_name" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.last_name.errors }"/>
+          <div *ngIf="submitted && f.last_name.errors" class="invalid-feedback">
+            <div *ngIf="f.last_name.errors.required">Last name is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" formControlName="email" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email should be valid email</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+<!--          <label for="role">Role</label>-->
+<!--          <select formControlName="role" class="form-control">-->
+<!--            <option *ngFor="let role of roles">{{role}}-->
+<!--            </option>-->
+<!--          </select>-->
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <div class="form-group justify-content-center d-flex">
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+          </button>
+        </div>
+        <div class="col-sm-12 mt-4 login_url">Already have an account? Please <a routerLink="/login">login!</a></div>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0 text-center">{{error}}</div>
+      </form>
+    </div>
+  </div>
+</div>

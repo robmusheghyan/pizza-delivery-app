@@ -1,0 +1,4 @@
+<div class="notify" *ngIf="visible" [@enterAnimation] [ngClass]="type">
+  <div class="notify-msg" [innerHTML]="message"></div>
+  <a href="javascript:;" class="close-icon" (click)="onClickClose()"></a>
+</div>

@@ -1,0 +1,28 @@
+<div class="restaurant_list row">
+  <div class="restaurant_container col-sm-3" *ngFor="let restaurant of restaurants">
+    <div class=" restaurant_list_item_wrapper" [routerLink]="['/restaurant/view/', restaurant.id]">
+      <restaurant-list-item class="restaurant_item" [restaurant]="restaurant"></restaurant-list-item>
+      <div class="button-container">
+        <button class="btn btn-primary" (click)="deleteRestaurant(restaurant.id)">Delete</button>
+        <button [routerLink]="['/restaurant/create-restaurant']" [queryParams]="{id:restaurant.id}"
+                class="btn btn-primary">Edit
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!restaurants.length">
+    You have not any restaurants yet. Start creating now.
+  </div>
+  <div>
+
+  </div>
+
+</div>
+<div class="row" *ngIf="restaurants.length">
+  <mat-paginator [length]="total"
+                 [pageSize]="limit"
+                 [pageSizeOptions]="[limit]"
+                 (page)="changePage($event)">
+  </mat-paginator>
+</div>

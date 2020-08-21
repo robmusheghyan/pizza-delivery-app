@@ -1,0 +1,16 @@
+﻿<div class="card mt-4">
+  <div class="card-body">
+    <h6>
+      <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+      To check your orders you can go the the your <a [routerLink]="['/restaurant/orders']"
+                                                      routerLinkActive="active_link"
+                                                      [routerLinkActiveOptions]="{exact:true}">orders page</a>
+    </h6>
+    <h6>
+      <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+      You can create restaurants <a [routerLink]="['/restaurant/create-restaurant']" routerLinkActive="active_link"
+                                    [routerLinkActiveOptions]="{exact:true}">here</a>
+    </h6>
+  </div>
+</div>
+<router-outlet></router-outlet>

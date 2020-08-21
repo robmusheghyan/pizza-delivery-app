@@ -1,0 +1,11 @@
+<div class="restaurant_list row">
+  <div class="restaurant_container col-sm-4" *ngFor="let restaurant of restaurants">
+    <div class="restaurant_blocked_wrapper" ngbTooltip="You are blocked by restaurant owner" placement="top"
+         *ngIf="restaurant.blocked">
+      <i class="fa fa-ban block_icon"></i>
+    </div>
+    <div class="restaurant_list_item_wrapper" [routerLink]="['/home/restaurant', restaurant.id]">
+      <restaurant-list-item class="restaurant_item" [restaurant]="restaurant"></restaurant-list-item>
+    </div>
+  </div>
+</div>

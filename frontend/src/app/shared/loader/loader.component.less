@@ -1,0 +1,84 @@
+.loader-wrapper {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  display: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(69, 69, 69, .3);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  display: flex;
+  opacity: 1;
+  .loader {
+    border-radius: 20px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    margin: 20px 10px;
+    padding-right: 20px;
+    padding-left: 15px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-shadow: 0 20px 60px -10px rgba(69, 69, 69, .6);
+    .loader-icon {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+    .loader-text {
+      color: #8e8e8e;
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
+}
+
+// Repsonsive Design
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+  .loader-wrapper {
+    .loader {
+      .loader-text {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+}

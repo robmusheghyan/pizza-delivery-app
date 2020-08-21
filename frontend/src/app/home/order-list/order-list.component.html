@@ -1,0 +1,23 @@
+<div class="orders_container mt-4" *ngIf="showOrderHistory && orders.length">
+  <div *ngFor="let order of orders" class="row order_item">
+    <div class="col-sm-9">
+      <order-list-item [order]="order">
+      </order-list-item>
+    </div>
+  </div>
+  <mat-paginator *ngIf="orders.length"
+                 [length]="total"
+                 [pageSize]="limit"
+                 [pageSizeOptions]="[limit]"
+                 (page)="changePage($event)">
+  </mat-paginator>
+</div>
+
+<div class="orders_container mt-4" *ngIf="showOrderHistory && !orders.length">
+  <h6>Your order history is empty</h6>
+</div>
+
+<div class="orders_container mt-4" *ngIf="!showOrderHistory">
+  <h6>Thank you! We've received your order. Your pizza on it's way... </h6>
+</div>
+

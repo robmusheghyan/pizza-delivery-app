@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/360/api/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/360/api/src/entity/facial-id.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/360/api/src/services/BaseService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/360/api/src/services/UserService.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/paz/dashboard-ui/src/app/common/polar-radar-chart/polar-radar-chart.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/event/event-search/event-search.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/services/authentication.service.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/services/metadata.service.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/shared/components/app-calendar/app-calendar.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/shared/components/file-downloader/file-downloader.component.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/shared/components/file-downloader/file-downloader.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/app/user-management/user-management.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/xampp/htdocs/toptal/scriptsasia/kokyaku/frontend/src/environments/environment.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

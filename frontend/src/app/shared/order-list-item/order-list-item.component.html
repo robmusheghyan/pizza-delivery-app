@@ -1,0 +1,28 @@
+<div class="order-item row">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <div class="order_data list_item_text">
+        Order Date` {{order.created_at | date : 'medium'}}
+      </div>
+      <div class="order_data list_item_text">
+        Total amount` {{price}}
+      </div>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      <div class="expanded_content">
+        <div class="order_information">
+          <h6>The order consists of`</h6>
+          <div class="meal_item list_item_text" *ngFor="let meal of meals">
+            {{meal.name}} <i class=" fa fa-times"></i> {{meal.order_meals.count}}
+          </div>
+        </div>
+        <div class="history_container">
+          <h6>The order history</h6>
+          <div *ngFor="let status_history of status_histories" class="history_item list_item_text">
+            {{getLabel(status_history)}} {{status_history.updatedAt | date : 'medium'}}
+          </div>
+        </div>
+      </div>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</div>

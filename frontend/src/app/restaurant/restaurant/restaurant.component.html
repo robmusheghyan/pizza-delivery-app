@@ -1,0 +1,29 @@
+<div class="row mt-4">
+  <button [routerLink]="['/restaurant/create-meal']" [queryParams]="{ restaurant_id: restaurant_id}"
+          class="btn btn-primary ml-4">Create Meal
+  </button>
+</div>
+<div class="meal_list row mt-4">
+  <div class="meal_container col-sm-4" *ngFor="let meal of meals">
+    <div class=" meal_list_item_wrapper">
+      <meal-list-item class="meal_item" [meal]="meal"></meal-list-item>
+      <div class="button-container">
+        <button [routerLink]="['/restaurant/create-meal']" [queryParams]="{ id: meal.id, restaurant_id: restaurant_id }"
+                class="btn btn-primary">Edit
+        </button>
+        <button (click)="deleteMeal(meal.id);" class="btn btn-primary">Delete
+        </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!meals.length">
+    You have not any meals yet. Start creating now.
+  </div>
+</div>
+<div class="row mt-4">
+  <mat-paginator [length]="total"
+                 [pageSize]="limit"
+                 [pageSizeOptions]="[limit]"
+                 (page)="changePage($event)">
+  </mat-paginator>
+</div>

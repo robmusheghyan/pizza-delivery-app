@@ -1,0 +1,23 @@
+﻿<!-- nav -->
+<notify></notify>
+<loader></loader>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav" style="flex: auto;">
+    <a class="nav-item nav-link" routerLink="/home">Home</a>
+    <a class="nav-item nav-link" routerLink="/home/orders" *ngIf="!isGuest">Orders</a>
+    <a class="nav-item nav-link" (click)="logout()" *ngIf="!isGuest">Logout</a>
+  </div>
+  <div>
+    <h4 *ngIf="!isGuest" style="color:#dddddd">
+      Welcome {{currentUser.first_name}}
+    </h4>
+    <a class="nav-item nav-link login-link" (click)="logout()" *ngIf="isGuest"
+       style="color: #dddddd">
+      Login
+    </a>
+  </div>
+</nav>
+<!-- main app container -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

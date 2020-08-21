@@ -1,0 +1,17 @@
+﻿<div class="card mt-4">
+  <h4 class="card-header">
+    Welcome {{currentUser.first_name}}
+  </h4>
+  <div class="card-body">
+    <h6>
+      <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+      {{
+        currentUser && currentUser.id !== 1
+          ? 'To check your orders you can navigate your orders page'
+          : 'To be able to see and track your order history, please login'
+      }}
+    </h6>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
